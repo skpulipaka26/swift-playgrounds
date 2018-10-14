@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		08FDCE424D9F9F349CBB66B4 /* Pods_ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EDA385655E7EBD69A4D519 /* Pods_ReactiveSwift.framework */; };
+		500199D9217315A000F45418 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500199D82173159F00F45418 /* AppState.swift */; };
+		500199DB2173163200F45418 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500199DA2173163200F45418 /* CounterReducer.swift */; };
+		500199DD2173165B00F45418 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500199DC2173165B00F45418 /* Actions.swift */; };
 		50D3D41B217154B300FF1401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3D41A217154B300FF1401 /* AppDelegate.swift */; };
 		50D3D41D217154B300FF1401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3D41C217154B300FF1401 /* ViewController.swift */; };
 		50D3D420217154B300FF1401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D3D41E217154B300FF1401 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		4052C68990DFC0E4C3EEEDE8 /* Pods-ReactiveSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveSwift/Pods-ReactiveSwift.release.xcconfig"; sourceTree = "<group>"; };
+		500199D82173159F00F45418 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		500199DA2173163200F45418 /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		500199DC2173165B00F45418 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		50D3D417217154B300FF1401 /* ReactiveSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D3D41A217154B300FF1401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D3D41C217154B300FF1401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		500199D52173152C00F45418 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				500199D82173159F00F45418 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		500199D62173153600F45418 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				500199DC2173165B00F45418 /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		500199D72173154000F45418 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				500199DA2173163200F45418 /* CounterReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		509AA5642173C68E00D17F3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50D3D41E217154B300FF1401 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		50D3D40E217154B300FF1401 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +108,12 @@
 		50D3D419217154B300FF1401 /* ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
+				509AA5642173C68E00D17F3A /* Views */,
+				500199D72173154000F45418 /* Reducers */,
+				500199D62173153600F45418 /* Actions */,
+				500199D52173152C00F45418 /* State */,
 				50D3D41A217154B300FF1401 /* AppDelegate.swift */,
 				50D3D41C217154B300FF1401 /* ViewController.swift */,
-				50D3D41E217154B300FF1401 /* Main.storyboard */,
 				50D3D421217154B400FF1401 /* Assets.xcassets */,
 				50D3D423217154B400FF1401 /* LaunchScreen.storyboard */,
 				50D3D426217154B400FF1401 /* Info.plist */,
@@ -165,6 +206,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveSwift/Pods-ReactiveSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -172,6 +214,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -206,6 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500199DD2173165B00F45418 /* Actions.swift in Sources */,
+				500199D9217315A000F45418 /* AppState.swift in Sources */,
+				500199DB2173163200F45418 /* CounterReducer.swift in Sources */,
 				50D3D41D217154B300FF1401 /* ViewController.swift in Sources */,
 				50D3D41B217154B300FF1401 /* AppDelegate.swift in Sources */,
 			);
